@@ -1,0 +1,4 @@
+User-agent: *
+Disallow:
+Disallow: /cgi-bin/
+Sitemap: http://www.riotmind.nyc/riot_man/sitemap.xml
