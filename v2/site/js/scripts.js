@@ -1,117 +1,184 @@
+/*
+- Adrian Velazquez
+- www.adriansane.com
+- www.riotmind.nyc
+- 2016 / 2017 / 2018
+  ----------------------
+  hire_adrianV@yahoo.com
+  admin@riotmind.nyc
+  ----------------------
+  index page scripts
+*/
 $(function(){
 
-// -------------------------------------------------------------------------loadUp loader
-function loadUp(){
-  var loading = setTimeout(killLoader, 2200)
-      a = $("#container"),
-      b = $("#loader"),
-      c = $("#loaderImg");
-};
+  // -------------------------------------------------------------------------headline animation
+  function headLine(){
+    // banner headline animation
+    TweenMax.staggerFrom($(".title"), 3, {opacity:0, delay:0.5, ease: Expo.easeOut, force3D:true}, 1);
+    TweenMax.from($("#headline p"), 2.75, {x:100, opacity:0, ease: Expo.easeOut});
+  };// end headline function
 
-// -------------------------------------------------------------------------kill loader
-function killLoader() {
-  TweenMax.to([b,c], .5, {scale:0, autoAlpha:0, display:"none", ease: Expo.easeIn});
-  TweenMax.set(a, {scale:.955, autoAlpha:0, transformOrigin:"top center"});
-  TweenMax.to(a, 1.5, {scale:1, autoAlpha:1, display:"block", ease: Expo.easeOut});
-};
-
-// -------------------------------------------------------------------------headline animation
-function headLine(){
-  TweenMax.staggerFrom($(".title"), 3, {opacity:0, delay:0.5, ease: Expo.easeOut, force3D:true, delay:3.25}, 1);
-  TweenMax.from($("#headline p"), 2.75, {x:100, opacity:0, delay:6.5, ease: Expo.easeOut});
-}
-
-// -------------------------------------------------------------------------scale project events
-function boast(){
-  // scale projects up on hover
-  $(".project").mouseover(function(){
-    TweenMax.to(this, 2, {scale:1.005,ease: Expo.easeOut, transformOrigin:"center center", rotationZ: 0.01});
-  });
-  // scale projects down on mouse out
-  $(".project").mouseout(function(){
-    TweenMax.to(this, 2, {scale:1, ease: Expo.easeOut, transformOrigin:"center center", rotationZ: 0.01});
-  });
-};
+  // -------------------------------------------------------------------------scale project events
+  function boast(){
+    // project image scale animation
+    $(".project").hover(function(){// scale project bg images up on mouseover
+      TweenMax.to(this, 2, {scale:1.005,ease: Expo.easeOut, transformOrigin:"center center", rotationZ: 0.01});
+    },
+    function(){// scale project bg images down on moseleave
+      TweenMax.to(this, 2, {scale:1, ease: Expo.easeOut, transformOrigin:"center center", rotationZ: 0.01});
+    });
+  };// end boast function
 
 // -------------------------------------------------------------------------main nav functions
-
 function navigation(){
- // smooth Scroll
+ // top nav to body smooth Scroll effect
  $('ul.topNav').find('a').click(function(){
-   var $href = $(this).attr('href');
-   var $anchor = $('#'+$href).offset();
-   $('body').animate({scrollTop: $anchor.top}, 2000, "easeInOutCubic");
-   console.log("smooth fired");
-   return false;
+   var $href = $(this).attr('href'),
+       $anchor = $('#'+$href).offset();
+   $('body').animate({scrollTop: $anchor.top}, 1200, "easeInOutCubic");
+ return false;
  });
 
- // navigation scroll bg effect
+ // top nav bg effect on scroll
  $(window).scroll(function(e){
-   var d = $('#mainNav'),
-       e = $(window).scrollTop();
-   if(e >= 550){
-     $(d).addClass("scrolled");
-   }else{
-     $(d).removeClass("scrolled");
-     console.log("nav bg scroll fired");
+   var a = $('#mainNav'),
+       b = $(window).scrollTop(),
+       //using clientWidth for IE8 and earlier
+       c = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
+
+   /*
+    Responsive mainNav effects conditional
+    add a bg effect to main nav depending on users device and current scroll position
+   */
+   if(c > 1024 && b >= 50){//expanded
+     $(a).addClass("scrolled");
+   }else if(c == 1024 && b >= 355){//full width
+     $(a).addClass("scrolled");
+   }else if(c == 768 && b >= 320){//iPad
+     $(a).addClass("scrolled");
+   }else if(c == 750 && b >= 320){//mobile
+     $(a).addClass("scrolled");
+   }else{//remove class
+     $(a).removeClass("scrolled");
    };
  });
 
- // active menu link
- $('#mainNav').find("a").click(function () {
-   $(this).removeClass('active');
-   $(this).addClass('active');
-   console.log("active link fired");
-  });
+};// end navigation function
 
-
-};
-
-// -------------------------------------------------------------------------main nav functions
+// -------------------------------------------------------------------------skill sets animations
 function showSkills(){
- //var set = [$(".set"), $(".set").find("4")];
- //var ssd = [$("#dev"), $("#des")];
- //var wsa = TweenMax.set([$("#dev"), $("#des")], {css:{backgroundImage:"none"}});
- var sets = [$("#dev1"),$("#dev2"),$("#dev3"),$("#dev4"),$("#des1"),$("#des2"),$("#des3"),$("#des4")];
+  var d = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
+  // responsive skills expanding animations
+  if(d <= 1024){
+    TweenMax.set($("#dev1"), {height: 140});
+    TweenMax.set($("#dev2"), {height: 140});
+    TweenMax.set($("#dev3"), {height: 110});
+    TweenMax.set($("#dev4"), {height: 90});
+    TweenMax.set($("#des1"), {height: 145});
+    TweenMax.set($("#des2"), {height: 90});
+    TweenMax.set($("#des3"), {height: 110});
+    TweenMax.set($("#des4"), {height: 90});
+  }else if(d <= 768){
+    TweenMax.set($("#dev1"), {height: 95});
+    TweenMax.set($("#dev2"), {height: 95});
+    TweenMax.set($("#dev3"), {height: 75});
+    TweenMax.set($("#dev4"), {height: 60});
+    TweenMax.set($("#des1"), {height: 105});
+    TweenMax.set($("#des2"), {height: 90});
+    TweenMax.set($("#des3"), {height: 80});
+    TweenMax.set($("#des4"), {height: 70});
+  };
 
-
- $(".set").mouseover(function(){
-
-   for(i=0; i<sets.length; i++){
-     TweenMax.to(sets[0], 1, {height:65, ease: Expo.easeOut}); // html
-   };
-
-
- });
-
- $(".set").mouseout(function(){
+ // html
+ $("#dev1").hover(function(){// mouseover
+   TweenMax.to(this, 1, {height:230, ease: Expo.easeOut});
+   TweenMax.set($(this).children("ul"), {autoAlpha:1});
+ },
+ function(){// mouseout
    TweenMax.to(this, 1, {height:35, ease: Expo.easeOut});
+   TweenMax.set($(this).children("ul"), {autoAlpha:0});
  });
 
+ // css
+ $("#dev2").hover(function(){// mouseover
+   TweenMax.to(this, 1, {height:230, ease: Expo.easeOut});
+   TweenMax.set($(this).children("ul"), {autoAlpha:1});
+ },
+ function(){// mouseout
+   TweenMax.to(this, 1, {height:35, ease: Expo.easeOut});
+   TweenMax.set($(this).children("ul"), {autoAlpha:0});
+ });
 
-};
+ // javascript
+ $("#dev3").hover(function(){// mouseover
+   TweenMax.to(this, 1, {height:180, ease: Expo.easeOut});
+   TweenMax.set($(this).children("ul"), {autoAlpha:1});
+ },
+ function(){// mouseout
+   TweenMax.to(this, 1, {height:35, ease: Expo.easeOut});
+   TweenMax.set($(this).children("ul"), {autoAlpha:0});
+ });
 
+ // wordpress
+ $("#dev4").hover(function(){// mouseover
+   TweenMax.to(this, 1, {height:195, ease: Expo.easeOut});
+   TweenMax.set($(this).children("ul"), {autoAlpha:1});
+ },
+ function(){// mouseout
+   TweenMax.to(this, 1, {height:35, ease: Expo.easeOut});
+   TweenMax.set($(this).children("ul"), {autoAlpha:0});
+ });
 
+ // photoshop
+ $("#des1").hover(function(){// mouseover
+   TweenMax.to(this, 1, {height:240, ease: Expo.easeOut});
+   TweenMax.set($(this).children("ul"), {autoAlpha:1});
+ },
+ function(){// mouseout
+   TweenMax.to(this, 1, {height:35, ease: Expo.easeOut});
+   TweenMax.set($(this).children("ul"), {autoAlpha:0});
+ });
 
+ // illustrator
+ $("#des2").hover(function(){// mouseover
+   TweenMax.to(this, 1, {height:180, ease: Expo.easeOut});
+   TweenMax.set($(this).children("ul"), {autoAlpha:1});
+ },
+ function(){// mouseout
+   TweenMax.to(this, 1, {height:35, ease: Expo.easeOut});
+   TweenMax.set($(this).children("ul"), {autoAlpha:0});
+ });
 
+ // animation
+ $("#des3").hover(function(){// mouseover
+   TweenMax.to(this, 1, {height:215, ease: Expo.easeOut});
+   TweenMax.set($(this).children("ul"), {autoAlpha:1});
+ },
+ function(){// mouseout
+   TweenMax.to(this, 1, {height:35, ease: Expo.easeOut});
+   TweenMax.set($(this).children("ul"), {autoAlpha:0});
+ });
 
+ // design
+ $("#des4").hover(function(){// mouseover
+   TweenMax.to(this, 1, {height:180, ease: Expo.easeOut});
+   TweenMax.set($(this).children("ul"), {autoAlpha:1});
+ },
+ function(){// mouseout
+   TweenMax.to(this, 1, {height:35, ease: Expo.easeOut});
+   TweenMax.set($(this).children("ul"), {autoAlpha:0});
+ });
 
+};// end showskills function
 
-
-// initialize functions
+// -------------------------------------------------------------------------initialize all functions
 function setItOff(){
-  //loadUp();
   navigation();
   headLine();
-  showSkills();
   boast();
+  showSkills();
   $('.slider').unslider();
-}
+};
 setItOff();
 
-
-
-
-
-
-});
+});// end document ready function
