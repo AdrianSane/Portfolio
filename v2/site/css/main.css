@@ -1,0 +1,455 @@
+/*-- setup --*/
+html, body, div, span, h1, h2, h3, h4, h5, p, a, img, ul, li, article, aside, footer, header, nav, section {
+margin: 0;
+padding: 0;
+border: 0;
+font-size: 1em;
+font: inherit;
+line-height: 1.5;
+color: rgba(0,0,0,0.54);
+font-family: 'Didact Gothic', sans-serif;
+vertical-align: baseline;
+-webkit-font-smoothing: antialiased;
+-moz-font-smoothing: antialiased;
+-o-font-smoothing: antialiased;
+}
+h1, h2, h3, h4, h5{
+font-family: 'Comfortaa', cursive;
+font-weight: bold;
+}
+#homePage h2,
+#homePage h3,
+#homePage h4{
+color: #000;
+}
+article, aside, footer, header, nav, section {
+display: block;
+}
+ul {
+list-style: none;
+}
+ul li{
+display: inline;
+}
+a{
+text-decoration: none;
+color: #ff5252;
+-webkit-transition: .5s;
+-moz-transition: .5s;
+-o-transition: .5s;
+transition: .5s;
+}
+a:hover{
+color: #323232;
+}
+iframe {
+border: none;
+}
+.padding{
+padding-top: 50px;
+padding-bottom: 50px;
+}
+.hidden{
+visibility: hidden;
+}
+.center{
+width: 50%;
+margin:0 auto;
+}
+body, #container{
+min-width: 100%;
+min-height: 100%;
+position: relative;
+}
+#container{
+          //display: none;
+overflow: hidden;
+}
+/* ---------------------------------------------------------------------------- LOADER CSS*/
+/*
+#loaderImg, #loader{
+position: absolute;
+margin: 200px 0 0 -75px;
+left: 50%;
+top: 50%;
+}
+#loader {
+width: 150px;
+height: 150px;
+border-radius: 50%;
+z-index: 1;
+border: 1px solid #f3f3f3;
+border-top: 1px solid #ff5252;
+-webkit-animation: spin 2s linear infinite;
+animation: spin 2s linear infinite;
+}
+#loaderImg{
+background-image: url("../img/logo.svg");
+//background-size: cover;
+width: 108px;
+height: 50px;
+top:50px;
+left:742px;
+}
+@-webkit-keyframes spin {
+  0% { -webkit-transform: rotate(0deg); }
+  100% { -webkit-transform: rotate(360deg); }
+}
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+*/
+/* ---------------------------------------------------------------------------- MAIN NAVIGATION*/
+/*-- changes nav bg color on scroll --*/
+.scrolled{
+background-color: #f8f8f8;
+-webkit-box-shadow: 0px 2px 5px 0px rgba(0,0,0,0.25);
+-moz-box-shadow: 0px 2px 5px 0px rgba(0,0,0,0.25);
+box-shadow: 0px 2px 5px 0px rgba(0,0,0,0.25);
+}
+.active {
+border-bottom: 2px solid #323232;
+color: #323232;
+}
+/*-- sticky menu --*/
+#mainNav{
+position:fixed;
+top:0;
+right:0;
+left:0;
+z-index:99;
+font-size: .85em;
+-webkit-transition: background-color 0.5s ease;
+-moz-transition: background-color 0.5s ease;
+-o-transition: background-color 0.5s ease;
+transition: background-color 0.5s ease;
+}
+#mainNav ul{
+width: 388px;
+margin: 15px auto;
+letter-spacing: .1em;
+}
+.topNav a:hover {
+border-bottom: 2px solid #323232;
+}
+.left{
+margin-right: 35px;
+}
+.right{
+margin-left: 35px;
+}
+#navLogo{
+position: absolute;
+width: 30px;
+height: 30px;
+left: 709px;
+margin-top: 9px;
+}
+/* ---------------------------------------------------------------------------- MAIN NAVIGATION*/
+/* ---------------------------------------------------------------------------- BILLBOARD*/
+#billboard{
+background-image: url("../img/billboard.jpg");
+background-size: contain;
+background-repeat: no-repeat;
+width: 100%;
+height: 600px;
+-webkit-box-shadow: 0px 2px 5px 0px rgba(0,0,0,0.25);
+-moz-box-shadow: 0px 2px 5px 0px rgba(0,0,0,0.25);
+box-shadow: 0px 2px 5px 0px rgba(0,0,0,0.25);
+}
+#heading{
+position: absolute;
+top: 200px;
+left: 100px;
+width: 100%;
+}
+#heading span:nth-child(1),
+#heading span:nth-child(2),
+#heading span:nth-child(3){
+font-family: 'Didact Gothic', sans-serif;
+font-size: 3em;
+display: inline;
+}
+/* ---------------------------------------------------------------------------- BILLBOARD*/
+/* ---------------------------------------------------------------------------- INTRO*/
+#work{
+text-align: center;
+}
+#work h2{
+font-size: 2em;
+}
+/* ---------------------------------------------------------------------------- INTRO*/
+/* ---------------------------------------------------------------------------- WORK*/
+.project{
+width:100%;
+height: calc(1286px/2);
+}
+.projectInfo{
+width:100%;
+height:100%;
+position: relative;
+text-align: center;
+-webkit-transition: .5s;
+-moz-transition: .5s;
+-o-transition: .5s;
+transition: .5s;
+}
+.projectInfo:hover{
+background-color: rgba(0, 0, 0, 0.75);
+}
+.projectInfo h2{
+position: absolute;
+margin: 165px auto 0 auto;
+width: 100%;
+}
+.projectInfo a{
+color: #fff;
+font-size: 4em;
+}
+.projectInfo a:hover{
+color: #ff5252;
+border-bottom: 2px solid #ff5252;
+}
+.projectInfo span{
+color: #fff;
+}
+.lineTop, .lineBottom{
+width:1px;
+height: 100px;
+background-color: #fff;
+margin: 0 auto;
+position: relative;
+}
+.lineTop{
+top: 160px;
+}
+.lineBottom{
+top: 310px;
+}
+/* set dimension of bg images for all projects */
+#portfolio .project{
+background-size: contain;
+background-repeat: no-repeat;
+}
+/* project bg images */
+#pixel{
+background-image: url("../img/pixel.jpg");
+}
+#tmo{
+background-image: url("../img/tmo.jpg");
+}
+#riot{
+background-image: url("../img/riot.jpg");
+}
+#point{
+background-image: url("../img/point.jpg");
+}
+#android{
+background-image: url("../img/android.jpg");
+}
+/* ---------------------------------------------------------------------------- WORK*/
+/* ---------------------------------------------------------------------------- MAD SKILLS*/
+#skills{
+text-align: center;
+width: 75%;
+}
+#skills h3{
+font-size: 2em;
+}
+#skills h4{
+font-size: 1.1em;
+}
+#sets{
+height: 255px;
+font-size: .75em;
+}
+#sets h5{
+color: #fff;
+margin: 10px;
+}
+#sets:hover{
+cursor: pointer;
+}
+#dev, #des{
+background-image: url("../img/Mad_Skills.png");
+background-size: contain;
+background-repeat: no-repeat;
+width:50%;
+height: 305px;
+float:left;
+}
+.set{
+width: 20%;
+height: 35px;
+margin: 20px 13px 0 13px;
+background-color: #ff5252;
+float: left;
+}
+.set ul li{
+display: block;
+color: #fff;
+}
+/* ---------------------------------------------------------------------------- MAD SKILLS*/
+/* ---------------------------------------------------------------------------- ABOUT SLIDER*/
+#about{
+background-color: #ff5252;
+text-align: center;
+}
+#about h4{
+font-size: 2em;
+}
+#about ul li{
+color: #fff;
+}
+/*SLIDER*/
+.slider{
+width: 50%;
+margin: 50px auto;
+}
+.unslider {
+overflow: auto;
+margin: 0;
+padding: 0;
+}
+.unslider-wrap {
+position: relative;
+}
+.unslider-wrap.unslider-carousel>li {
+float: left;
+}
+.unslider-vertical>ul {
+height: 100%;
+}
+.unslider-vertical li {
+float: none;
+width: 100%;
+}
+.unslider-fade {
+position: relative;
+}
+.unslider-fade .unslider-wrap li {
+position: absolute;
+left: 0;
+top: 0;
+right: 0;
+z-index: 8;
+}
+.unslider-fade .unslider-wrap li.unslider-active {
+z-index: 10;
+}
+.unslider li,
+.unslider ol,
+.unslider ul {
+list-style: none;
+margin: 0;
+padding: 0;
+border: none;
+}
+.unslider-arrow {
+position: absolute;
+left: 100px;
+z-index: 2;
+cursor: pointer;
+color: #fff;
+font-size:2em;
+padding: 5px;
+top:4800px;
+}
+.unslider-arrow.next {
+left: auto;
+right: 100px;
+}
+/*PAGINATION*/
+.unslider-nav ol {
+list-style: none;
+text-align: center;
+padding-bottom: 20px;
+}
+.unslider-nav ol li {
+display: inline-block;
+width: 6px;
+height: 6px;
+margin: 0 4px;
+background: transparent;
+border-radius: 5px;
+overflow: hidden;
+text-indent: -999em;
+border: 2px solid #fff;
+cursor: pointer;
+}
+.unslider-nav ol li.unslider-active {
+background: #fff;
+cursor: default;
+}
+/* ---------------------------------------------------------------------------- ABOUT SLIDER*/
+/* ---------------------------------------------------------------------------- CONNECT*/
+#connect{
+background-image: url("../img/connect.jpg");
+background-size: contain;
+background-repeat: no-repeat;
+width: 100%;
+height: 810px;
+-webkit-transition: .5s;
+-moz-transition: .5s;
+-o-transition: .5s;
+transition: .5s;
+}
+#connect h3{
+font-size: 2em;
+}
+#connect h3, #connect p{
+color: #fff;
+text-align: center;
+}
+#connect #outBound a{
+border: 2px solid #fff;
+color: #fff;
+border-radius: 2px;
+display: inline-block;
+width: 150px;
+padding: 8px;
+text-align: center;
+outline: none;
+margin:20px;
+}
+#connect #outBound a:hover{
+border: 2px solid #ff5252;
+color: #ff5252;
+}
+#outro{
+position: relative;
+top: 360px;
+padding: 20px;
+-webkit-transition: .5s;
+-moz-transition: .5s;
+-o-transition: .5s;
+transition: .5s;
+}
+#outro:hover{
+background-color: rgba(0, 0, 0, 0.75);
+}
+#outBound{
+text-align: center;
+}
+#social a{
+padding: 15px;
+color: #fff;
+}
+#social a:hover{
+border-bottom: 2px solid #ff5252;
+color: #ff5252;
+}
+/* ---------------------------------------------------------------------------- CONNECT*/
+footer{
+bottom: 0;
+left: 0;
+right: 0;
+background-color: rgba(250, 250, 250, 1);
+text-align: center;
+max-width: 100%;
+height: 100px;
+}
+#adrianSane{
+padding-top: 40px;
+}

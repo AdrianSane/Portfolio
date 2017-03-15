@@ -1,0 +1,224 @@
+@media screen and (max-width:1024px){
+/*the viewport is 1024px pixels wide or smaller*/
+  #navLogo{
+  left: 505px;
+  }
+  #billboard{
+  height: 427px;
+  }
+  .project{
+  height: calc(921px/2);
+  }
+  .lineTop{
+  top:70px;
+  }
+  .projectInfo h2{
+  margin-top:85px;
+  }
+  .lineBottom{
+  top:240px;
+  }
+  .slider{
+  margin:20px auto;
+  }
+  .unslider-arrow{
+  top:3768px;
+  }
+  #connect{
+  height:576px;
+  }
+  #outro{
+  top:230px;
+  }
+}
+@media screen and (max-width:768px){/* ipad + ipad mini */
+/*the viewport is 768px pixels wide or smaller*/
+  .center{
+  width:80%;
+  }
+  #navLogo{
+  left: 375px;
+  }
+  #billboard{
+  height: 320px;
+  }
+  #heading{
+  top:120px;
+  }
+  #heading span:nth-child(1), #heading span:nth-child(2), #heading span:nth-child(3){
+  font-size: 2em;
+  }
+  .project{
+  height: calc(691px/2);
+  }
+  .lineTop, .lineBottom{
+  height:50px;
+  }
+  .lineTop{
+  top:50px;
+  }
+  .lineBottom{
+  top:200px;
+  }
+  .projectInfo h2{
+  margin-top:65px;
+  font-size: 0.75em;
+  }
+  .unslider-arrow{
+  top:3118px;
+  }
+  #skills{
+  height: 450px;
+  }
+  .set{
+  width:15%;
+  height: 27px;
+  margin: 20px 14px 0 14px;
+  }
+  #sets h5{
+  margin: 10px auto;
+  font-size: 6px;
+  }
+  #outro{
+  top:160px;
+  }
+  #connect{
+  height: 432px;
+  }
+}
+@media screen and (max-width:425px){
+/*the viewport is 425px pixels wide or smaller*/
+  .topNav{
+  display: none;
+  }
+  #navLogo{
+  left: 204px;
+  }
+  #billboard{
+  height: 177px;
+  }
+  #heading{
+  top: 60px;
+  left: 70px;
+  }
+  #heading span:nth-child(1), #heading span:nth-child(2), #heading span:nth-child(3){
+  font-size: 1.5em;
+  }
+  #work{
+  padding-top: 25px;
+  padding-bottom: 25px;
+  }
+  #work p{
+  font-size: .85em;
+  }
+  .project{
+  height: calc(382px/2);
+  }
+  .lineTop, .lineBottom{
+  height:30px;
+  }
+  .lineTop{
+  top: 30px;
+  }
+  .lineBottom{
+  top: 100px;
+  }
+  .projectInfo h2{
+  margin-top: 30px;
+  font-size: 0.5em;
+  }
+  #skills, #about{
+  display: none;
+  }
+  #connect{
+  height: 239px;
+  }
+  #outro{
+  top: 60px;
+  }
+  #connect h3{
+  font-size: 1.5em;
+  }
+  #connect #outBound a{
+  width: 80px;
+  padding: 5px;
+  font-size: .75em;
+  margin: 10px;
+  border: 1px solid #fff;
+  }
+  #social a{
+  padding: 10px;
+  font-size: .75em;
+  }
+}
+
+@media screen and (max-width:414px){/* iphone6 plus */
+/*the viewport is 414px pixels wide or smaller*/
+}
+
+@media screen and (max-width:375px){/* iphone 6 */
+/*the viewport is 375px pixels wide or smaller*/
+  #navLogo{
+  left: 175px;
+  }
+  #billboard{
+  height: 156px;
+  }
+  #heading{
+  top: 50px;
+  left: 39px;
+  }
+  #work p{
+  font-size: .75em;
+  }
+  .project{
+  height: calc(337px/2);
+  }
+  .lineTop{
+  top: 20px;
+  }
+  .lineBottom{
+  top: 90px;
+  }
+  .projectInfo h2{
+  margin-top: 20px;
+  font-size: 0.35em;
+  }
+  #connect{
+  height: 211px;
+  }
+}
+@media screen and (max-width:320px){/* iphone 5 */
+/*the viewport is 320px pixels wide or smaller*/
+  #navLogo{
+  left: 150px;
+  }
+  #heading{
+  top: 40px;
+  left: 14px;
+  }
+  #billboard{
+  height: 134px;
+  }
+  #work p{
+  font-size: .75em;
+  }
+  .project{
+  height: calc(288px/2);
+  }
+  .lineTop{
+  top: 10px;
+  }
+  .projectInfo h2{
+  margin-top: 10px;
+  }
+  .lineBottom{
+  top: 76px;
+  }
+  #connect{
+  height: 180px;
+  }
+  #outro{
+  top: 15px;
+  }
+}
