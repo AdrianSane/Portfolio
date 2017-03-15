@@ -1,0 +1,70 @@
+/*
+- Adrian Velazquez
+- www.adriansane.com
+- www.riotmind.nyc
+- 2016 / 2017
+  ----------------------
+  hire_adrianV@yahoo.com
+  ----------------------
+  tmo.html portfolio (banner page) asset dimensions setup
+*/
+#billboard{
+background-image: url("../images/bannerImg/tmo_BillBoard.jpg");
+}
+/* image dimensions */
+#tmo_300x250_1,
+#tmo_300x250_2,
+#tmo_300x250_3,
+#tmo_970x66{
+background-size: contain;
+background-repeat: no-repeat;
+width: 100%;
+height: 660px;
+position: absolute;
+}
+/* project client images */
+#client{
+background-image: url("../images/bannerImg/client_tmo.svg");
+}
+#showCase{
+background-image: url("../images/bannerImg/show_case_tmo.png");
+}
+/* showcase images */
+#tmo_300x250_1{
+background-image: url("../images/bannerImg/tmo_300x250_1.png");
+}
+#tmo_300x250_2{
+background-image: url("../images/bannerImg/tmo_300x250_2.png");
+}
+#tmo_300x250_3{
+background-image: url("../images/bannerImg/tmo_300x250_3.png");
+}
+#tmo_970x66{
+background-image: url("../images/bannerImg/tmo_970x66.png");
+}
+/* full width placement image */
+#placement{
+background-image: url("../images/bannerImg/tmo_placement.jpg");
+}
+/* aside design images */
+#design1{
+background-image: url("../images/bannerImg/tmo_design.jpg");
+}
+#design2{
+background-image: url("../images/bannerImg/tmo_design2.jpg");
+}
+/* iFrame setup for design div */
+#tmo_banner_300x250_1{
+transform: scale(0.585, 0.63);
+top: 16px;
+left: 505px;
+}
+#tmo_banner_300x250_2{
+transform: scale(0.585, 0.63);
+top: 185px;
+left: 201px;
+}
+/* aside design image 3 */
+#design3{
+background-image: url("../images/bannerImg/tmo_design3.jpg");
+}

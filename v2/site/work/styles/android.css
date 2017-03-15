@@ -1,0 +1,76 @@
+/*
+- Adrian Velazquez
+- www.adriansane.com
+- www.riotmind.nyc
+- 2016 / 2017
+  ----------------------
+  hire_adrianV@yahoo.com
+  ----------------------
+  android.html portfolio (banner page) asset dimensions setup
+*/
+#billboard{
+background-image: url("../images/bannerImg/android_BillBoard.jpg");
+}
+/* image dimensions */
+#android_160x600,
+#android_300x600,
+#android_300x250,
+#android_728x90{
+background-size: contain;
+background-repeat: no-repeat;
+width: 100%;
+height: 660px;
+position: absolute;
+}
+/* project client images */
+#client{
+background-image: url("../images/bannerImg/client_android.svg");
+}
+#showCase{
+background-image: url("../images/bannerImg/show_case_android.png");
+}
+/* showcase images */
+#android_160x600{
+background-image: url("../images/bannerImg/android_160x600.png");
+}
+#android_300x600{
+background-image: url("../images/bannerImg/android_300x600.png");
+}
+#android_300x250{
+background-image: url("../images/bannerImg/android_300x250.png");
+}
+#android_728x90{
+background-image: url("../images/bannerImg/android_728x90.png");
+}
+/* full width placement image */
+#placement{
+background-image: url("../images/bannerImg/android_placement.jpg");
+}
+/* aside design images */
+#design1{
+background-image: url("../images/bannerImg/android_design.jpg");
+}
+/* iFrame setup for design div */
+#android_banner_300x600{
+transform: scale(0.58, 0.579);
+top: -39px;
+left: 162px;
+}
+#design2{
+background-image: url("../images/bannerImg/android_design2.jpg");
+}
+/* iFrame setup for design div */
+#android_banner_300x250{
+transform: scale(0.58, 0.61);
+top: 202px;
+left: 513px;
+}
+#design3{
+background-image: url("../images/bannerImg/android_design3.jpg");
+}
+/* iFrame setup for design div */
+#android_banner_728x90{
+transform: scale(0.581, 0.615);
+top: 223px;
+left: 52px;
+}

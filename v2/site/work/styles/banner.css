@@ -1,0 +1,352 @@
+/*
+- Adrian Velazquez
+- www.adriansane.com
+- www.riotmind.nyc
+- 2016 / 2017
+  ----------------------
+  hire_adrianV@yahoo.com
+  ----------------------
+  portfolio (banner page) setup
+*/
+html, body, div, span, h1, h2, h3, h4, p, a, img, ul, li, aside, footer, header, nav, section{
+margin: 0;
+padding: 0;
+border: 0;
+font-size: 1em;
+font: inherit;
+line-height: 1.5;
+color: rgba(0,0,0,0.54);
+font-family: 'Didact Gothic', sans-serif;
+vertical-align: baseline;
+-webkit-font-smoothing: antialiased;
+-moz-font-smoothing: antialiased;
+-o-font-smoothing: antialiased;
+}
+h1, h2, h3, h4{
+font-family: 'Comfortaa', cursive;
+font-weight: bold;
+}
+h2{
+color: #ff5252;
+font-size: .75em;
+letter-spacing: .1em;
+}
+h4{
+font-size: 1.5em;
+letter-spacing: .1em;
+color: #ff5252;
+}
+h4 p{
+font-size: 0.75em;
+color: rgba(0,0,0,0.54);
+padding-bottom: 20px;
+}
+article, aside, footer, header, nav, section {
+display: block;
+}
+ul {
+list-style: none;
+}
+ul li{
+display: inline;
+}
+a{
+text-decoration: none;
+color: #ff5252;
+-webkit-transition: .5s;
+-moz-transition: .5s;
+-o-transition: .5s;
+transition: .5s;
+}
+a:hover{
+color: #323232;
+}
+iframe {
+border: none;
+overflow: hidden;
+-webkit-transform-origin: center center;
+-moz-transform-origin: center center;
+-ms-transform-origin: center center;
+-o-transform-origin: center center;
+transform-origin: center center;
+position: relative;
+}
+/* positioning classes */
+.padding{
+padding-top: 50px;
+padding-bottom: 50px;
+}
+.hidden{
+visibility: hidden;
+}
+.center{
+width: 85%;
+margin:0 auto;
+}
+body, #container{
+min-width: 100%;
+min-height: 100%;
+position: relative;
+}
+#container{
+          display: none;
+overflow: hidden;
+}
+/* ---------------------------------------------------------------------------- LOADER CSS*/
+/*
+#loaderImg, #loader{
+position: absolute;
+margin: 200px 0 0 -75px;
+left: 50%;
+top: 50%;
+}
+#loader {
+width: 150px;
+height: 150px;
+border-radius: 50%;
+z-index: 1;
+border: 1px solid #f3f3f3;
+border-top: 1px solid #ff5252;
+-webkit-animation: spin 2s linear infinite;
+animation: spin 2s linear infinite;
+}
+#loaderImg{
+background-image: url("../../img/logo.svg");
+//background-size: cover;
+width: 108px;
+height: 50px;
+top:50px;
+left:742px;
+}
+@-webkit-keyframes spin {
+  0% { -webkit-transform: rotate(0deg); }
+  100% { -webkit-transform: rotate(360deg); }
+}
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+*/
+
+/* main navigation */
+.scrolled{/*-- changes nav bg color on scroll --*/
+background-color: #f8f8f8;
+-webkit-box-shadow: 0px 2px 5px 0px rgba(0,0,0,0.25);
+-moz-box-shadow: 0px 2px 5px 0px rgba(0,0,0,0.25);
+box-shadow: 0px 2px 5px 0px rgba(0,0,0,0.25);
+}
+
+          .getSticky{/*-- sticky menu --*/
+          position:fixed;
+          top:0;
+          right:0;
+          left:0;
+          z-index:99;
+          }
+header{
+position: relative;
+}
+          nav{
+          //position:fixed;
+          //top:0;
+          //right:0;
+          //left:0;
+          //z-index:99;
+          font-size: .85em;
+          width: 100%;
+          height: 50px;
+          text-align: center;
+          }
+#mainNav #prev p, #mainNav #next p{
+font-size: 1.25em;
+font-weight: 600;
+}
+#prev, #middle, #next{
+width:33.28%;
+float: left;
+height: 50px;
+-webkit-transition: background-color 0.5s ease;
+-moz-transition: background-color 0.5s ease;
+-o-transition: background-color 0.5s ease;
+transition: background-color 0.5s ease;
+}
+#prev:hover, #middle:hover, #next:hover{
+background-color: #f8f8f8;
+}
+#navLogo{
+width: 45px;
+height: 45px;
+}
+/* billboard setup */
+#billboard{
+background-size: contain;
+background-repeat: no-repeat;
+width: 100%;
+height: 400px;
+margin-top: 50px;
+-webkit-box-shadow: 0px 2px 5px 0px rgba(0,0,0,0.25);
+-moz-box-shadow: 0px 2px 5px 0px rgba(0,0,0,0.25);
+box-shadow: 0px 2px 5px 0px rgba(0,0,0,0.25);
+}
+/* set page common image dimensions */
+#role,
+#employer,
+#client,
+#showCase,
+#placement,
+#placement2,
+.work{
+background-size: contain;
+background-repeat: no-repeat;
+}
+#info{
+height: 785px;
+}
+#mockups{
+width:100%;
+}
+.process, .project{
+float: left;
+margin: 21px;
+}
+.process{
+width: 25%;
+}
+.process h3:nth-child(4),
+.process h3:nth-child(7){
+margin-top: 50px;
+}
+.project{
+width: 68%;
+}
+#bid{
+border-top: 1px solid #f8f8f8;
+border-bottom: 1px solid #f8f8f8;
+text-align: center;
+height: 70px;
+width: 100%;
+margin-top: 50px;
+padding-top: 20px;
+}
+#bid ul li{
+width:33.28%;
+float: left;
+height: 50px;
+}
+#role, #employer, #client{
+width: 70px;
+height: 25px;
+margin: 10px auto;
+}
+#employer{
+background-image: url("../images/bannerImg/employer.svg");
+}
+#showCase{
+width: 100%;
+height: 660px;
+position: relative;
+overflow: hidden;
+}
+#placement{
+height: calc(1492px/2);
+}
+#styling{
+height: 1747px;
+}
+.work{
+width: 100%;
+height: 500px;
+}
+/* skill tags setup */
+#tags{
+border-top: 1px solid #f8f8f8;
+border-bottom: 1px solid #f8f8f8;
+margin: 10px 0;
+padding: 10px 0;
+}
+#tags ul li{
+color: #fff;
+text-shadow: 0 1px 0 rgba(0,0,0,.15);
+line-height: 32px;
+display: inline;
+border-radius: 4px;
+font-size: 12px;
+background-color: #ff5252;
+padding: 4px 9px;
+font-weight: bold;
+}
+/* design image setup */
+#design1{
+height: calc(953px/2);
+margin: 0 10px;
+}
+#design2{
+height: calc(953px/2);
+margin: 50px 10px;
+}
+#design3{
+height: calc(953px/2);
+margin: 50px 10px;
+}
+#placement2{
+background-image: url("../images/bannerImg/placement_video.jpg");
+height: calc(1492px/2);
+}
+#placement2 iframe{
+top: 64px;
+left: 277px;
+position: relative;
+}
+#moreWork{
+text-align: center;
+}
+#more ul{
+width: 100%;
+height: 240px;
+border-top: 1px solid rgba(0,0,0,0.54);
+}
+#more ul li{
+width: 23%;
+height: 100px;
+float: left;
+padding: 10px;
+overflow: hidden;
+}
+/* more work images */
+#chase{
+background-image: url("../images/bannerImg/more_chase.png");
+}
+#hennessy{
+background-image: url("../images/bannerImg/more_hennessy.png");
+}
+#dixie{
+background-image: url("../images/bannerImg/more_dixie.png");
+}
+#overWatch{
+background-image: url("../images/bannerImg/more_overWatch.png");
+}
+#scion{
+background-image: url("../images/bannerImg/more_scion.png");
+}
+#johnsonville{
+background-image: url("../images/bannerImg/more_johnsonville.png");
+}
+#quilted{
+background-image: url("../images/bannerImg/more_quilted.png");
+}
+#water{
+background-image: url("../images/bannerImg/more_water.png");
+}
+/* footer setup */
+footer{
+bottom: 0;
+left: 0;
+right: 0;
+background-color: rgba(250, 250, 250, 1);
+text-align: center;
+max-width: 100%;
+height: 100px;
+}
+#adrianSane{
+padding-top: 40px;
+}
