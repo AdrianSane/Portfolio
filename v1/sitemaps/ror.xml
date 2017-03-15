@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:ror="http://rorweb.com/0.1/" >
+<channel>
+  <title>ROR Sitemap for http://www.adriansane.com/</title>
+  <link>http://www.adriansane.com/</link>
+
+<item>
+     <link>http://www.adriansane.com/</link>
+     <title>The everything portfolio of Adrian Sane. A designer and developer from NYC.</title>
+     <description>The everything portfolio of Adrian Sane. A designer and developer from NYC.</description>
+     <ror:updatePeriod>weekly</ror:updatePeriod>
+     <ror:sortOrder>0</ror:sortOrder>
+     <ror:resourceOf>sitemap</ror:resourceOf>
+</item>
+<item>
+     <link>http://www.adriansane.com/docs/AdrianVelazquez-FrontEndDeveloper.pdf</link>
+     <title></title>
+     
+     <ror:updatePeriod>weekly</ror:updatePeriod>
+     <ror:sortOrder>1</ror:sortOrder>
+     <ror:resourceOf>sitemap</ror:resourceOf>
+</item>
+</channel>
+</rss>
+  
